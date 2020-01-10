@@ -29,6 +29,15 @@ app.get('/generate', function(req, res) {
         if (err) throw err;
         res.status(200).send(result);
     });
+});
+app.post('/add', function(req, res) {
+	var namn = req.body['namn'];
+	var url = req.body['url'];
+	var bild = req.body['bild'];
+	db.query('INSERT INTO `julklappar` (`namn`, `url`, `bild`) VALUES (?, ?, ?);', [namn, url, bild], (err, result) => {
+		if (err) throw err;
+		res.sendStatus(201);
+	});
 })
 
 // Start the server

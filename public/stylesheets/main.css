@@ -43,6 +43,10 @@
 	align-items: center;
 }
 
+.nav-addnew {
+	margin-left: 2vw;
+}
+
 .topnav a:hover {
 	cursor: pointer;
 }
@@ -86,6 +90,37 @@
 .output h2 {
 	margin-bottom:;
 }
+
+.add {
+	min-height: 20%;
+	min-width: 20%;
+	display: flex;
+	flex-direction: column;
+}
+
+.addform {
+	display: flex;
+	flex-direction: column;
+}
+
+.add input {
+	width: 8vw;
+	padding: 8px;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+.add .addbutton {
+	padding: 8px;
+	border: none;
+	background-color: greenyellow;
+	border-radius: 4px;
+}
+
+.add input, .addbutton {
+	margin-top: 0.5vw;
+}
+
 
 .active {
 	background-color: greenyellow!important;
