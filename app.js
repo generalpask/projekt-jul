@@ -22,8 +22,14 @@ app.use(errorhandler());
 
 // Routes
 app.get('/', function(req, res) {
-    res.status(200).sendFile(path.join(__dirname+'/views/index.html'));
+    res.status(200).sendFile(path.join(__dirname+'/index.html'));
 });
+app.get('/generate', function(req, res) {
+	db.query('SELECT * FROM `julklappar`', (err, result) => {
+        if (err) throw err;
+        res.status(200).send(result);
+    });
+})
 
 // Start the server
 var port = 4100;
