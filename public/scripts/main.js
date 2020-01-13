@@ -45,22 +45,19 @@ $(document).ready(function() {
 $(".nav-home").click(function() {
     $(".content").load("views/home.html")
     $(this).addClass('active');
-    $(".nav-generator").removeClass('active');
-    $(".nav-add").removeClass('active');
+    $(".nav").not(this).removeClass('active');
 });
 
 $(".nav-generator").click(function() {
     $(".content").load("views/generator.html")
     $(this).addClass('active');
-    $(".nav-home").removeClass('active');
-    $(".nav-add").removeClass('active');
+    $(".nav").not(this).removeClass('active');
 });
 
 $(".nav-add").click(function() {
     $(".content").load("views/add.html");
     $(this).addClass('active');
-    $(".nav-generator").removeClass('active');
-    $(".nav-home").removeClass('active');
+    $(".nav").not(this).removeClass('active');
 });
 
 function generate() {
