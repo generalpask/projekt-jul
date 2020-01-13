@@ -16,7 +16,7 @@ function add() {
 
     event.preventDefault();
 
-    if ($(".namn").html("") && $(".url").html("") && $(".bild").html("")) {
+    if ($(".namn").val() == "" && $(".url").val() == "" && $(".bild").val() == "") {
         $(".result").html("Vänligen fyll i åtminstone ett fält");
     }
     else {
